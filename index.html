@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple  Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="player">
+
+<!--    Section for displaying details-->
+        <div class="details">
+            <div class="now-playing">Playing x Of y</div>
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+            <div class="track-artist">Track Artist</div>
+        </div>
+
+<!--        Section for displaying track buttons-->
+        <div class="buttons">
+            <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+            <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+            <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+        </div>
+
+<!--        Section for displaying the seek slider-->
+        <div class="slider_container">
+            <div class="current-time">00.00</div>
+            <label>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+            </label>
+            <div class="total-duration">00.00</div>
+        </div>
+
+<!--        section for displaying volume slider-->
+        <div class="slider_container">
+            <i class="fa fa-volume-down"></i>
+            <label>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()" >
+            </label>
+            <i class="fa fa-volume-up"></i>
+        </div>
+    </div>
+
+<!--    Loading main script for the player-->
+    <script src="script.js"></script>
+</body>
+</html>
